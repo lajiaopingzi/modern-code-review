@@ -27,23 +27,23 @@ int  main(){
  std::cout << "X = Player 1" << std::endl << "O = Player 2" << std::endl;
  for (int n=0; n<9; n++){
    turn = !turn;  // use the not-operator to change true to false or false to true.
-      if (turn == false)
+   if (turn == false)
     std::cout << "Player 1: ";
    else
     std::cout << "Player 2: ";
    std::cout << "Which cell to mark? i:[1..3], j:[1..3]: "; 
    std::cin >> i >> j;
    if (turn == false)
-      game[i][j] = 'X';
+    game[i][j] = 'X';
    else 
-      game[i][j] = 'O';
+    game[i][j] = 'O';
    if (isWin(game)){
     std::cout << "Win!" << std::endl;
     break; // need to terminate the problem
    }
   }
  if (i==3) // all celles with i=0 to 2 have been inputted above but no winner yet
-    std::cout << "Tie!" << std::endl;
+  std::cout << "Tie!" << std::endl;
 
  // show the game to console
  std::cout << game[0][0] << " " << game[0][1] << " " << game[0][2] << std::endl;
