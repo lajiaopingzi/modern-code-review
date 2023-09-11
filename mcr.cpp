@@ -33,6 +33,21 @@ int  main(){
     std::cout << "Player 2: ";
    std::cout << "Which cell to mark? i:[1..3], j:[1..3]: "; 
    std::cin >> i >> j;
+  // check if the position is occupied or not
+   position = False;
+   if (game[i][j] = 'X' || game[i][j] = "O")
+    position = True;
+   while(position == True):
+    {
+     std::cout << "This position is occupied, please choose another one!";
+     std::cout << "Which cell to mark? i:[1..3], j:[1..3]: "; 
+     std::cin >> i >> j;
+     if (game[i][j] = 'X' || game[i][j] = "O")
+      position = True;
+     else
+      position = False;
+    }
+  
    if (turn == false)
     game[i][j] = 'X';
    else 
